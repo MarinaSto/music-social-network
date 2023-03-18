@@ -5,41 +5,75 @@
                 <div class="bg-black p-8 shadow rounded mb-g">
                     <h1 class="mb-6 text-lg text-gray-100 font-thin">Let's get rocking!</h1>
                     <div class="mb-4">
-                        <label class="block uppercase tracking-wide text-xs font-bold mb-2 text-gray-100">
-                            Firstname
-                        </label>
-                        <input class="
-                    appearance-none
-                    block
-                    w-full
-                    bg-white
-                    text-grey-700
-                    border
-                    border-grey-400
-                    rounded
-                    py-3
-                    px-4
-                    loading-tight
-                    focus:outline:none
-                    focus:bg-white
-                    focus:border-grey-500
-                    "
-                               type="text">
+                        <TextInput
+                            label="First Name"
+                            :labelColor="false"
+                            placeholder="Jhon"
+                            v-model:input="firstName"
+                            inputType="text"
+                            error="This is a text error"
+                        />
+                        </div>
+                    <div class="mb-4">
+                        <TextInput
+                            label="Last Name"
+                            :labelColor="false"
+                            placeholder="Willson"
+                            v-model:input="lastName"
+                            inputType="text"
+                            error="This is a text error"
+                        />
+                        </div>
+                    <div class="mb-4">
+                        <TextInput
+                            label="Email"
+                            :labelColor="false"
+                            placeholder="jhon.willson@g.com"
+                            v-model:input="email"
+                            inputType="text"
+                            error="This is a text error"
+                        />
                     </div>
-                    <span class="text-red-500">
-                    This is an error messages
-                </span>
-                    <button class="block w-full bg-green-500 text-white rounded-sm py-3 text-sm tracking-wide">
-                        Register
-                    </button>
+                    <div class="mb-4">
+                        <TextInput
+                            label="Password"
+                            :labelColor="false"
+                            placeholder="password123"
+                            v-model:input="password"
+                            inputType="password"
+                            error="This is a text error"
+                        />
+                    </div>
+                    <div class="mb-4">
+                        <TextInput
+                            label="Confirm Password"
+                            :labelColor="false"
+                            placeholder="password123"
+                            v-model:input="confirmPassword"
+                            inputType="password"
+                        />
+                    </div>
+                        <button class="block w-full bg-green-500 text-white rounded-sm py-3 text-sm tracking-wide">
+                            Register
+                        </button>
+                    </div>
+                    <p class="text-center text-md text-gray-900">
+                        Alredy have an account?
+                        <router-link to="login" class="text-blue-500 no-underline hover:underline">
+                            Login
+                        </router-link>
+                    </p>
                 </div>
-                <p class="text-center text-md text-gray-900">
-                    Alredy have an account?
-                    <router-link to="login" class="text-blue-500 no-underline hover:underline">
-                        Login
-                    </router-link>
-                </p>
             </div>
         </div>
-    </div>
-</template>
+    </template>
+<script setup>
+import TextInput from "@/components/global/TextInput.vue";
+import {ref} from 'vue';
+
+let firstName = ref(null)
+let lastName = ref(null)
+let email = ref(null)
+let password = ref(null)
+let confirmPassword = ref(null)
+</script>
