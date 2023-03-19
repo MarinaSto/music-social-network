@@ -24,10 +24,12 @@
         </div>
     </div>
     <SongsSection />
+    <YoutubeVideoSection />
 </template>
 <script setup>
 import RouterLink from "@/components/global/RouterLinkButton.vue";
 import ProfileInfoSection from "@/components/partials/profile/ProfileInfoSection.vue";
 import ProfileAboutSection from "@/components/partials/profile/ProfileAboutSection.vue";
 import SongsSection from "@/components/partials/profile/SongsSection.vue";
+import YoutubeVideoSection from "@/components/partials/profile/YoutubeVideoSection.vue";
 </script>
