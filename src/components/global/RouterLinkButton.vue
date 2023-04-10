@@ -21,7 +21,10 @@ import {defineProps, toRefs} from "vue";
 
 const props = defineProps({
     btnText: String,
-    url: String,
+    url: {
+        type: String,
+        default: ''
+    },
     color: String,
 })
 const {btnText, url, color} = toRefs(props);
